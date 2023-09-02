@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'task_manager_app/styles.css' %}">
+  <title>Task List</title>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <a href="{% url 'task_list' %}" class="navbar-brand">
+        <img src="{% static 'task_manager_app/taskmanager_1.jpg' %}" alt="Task Image" class = "fit-image" height="40" width="120">
+      </a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1 class="page-title">Task List</h1>
+    <ul class="task-list">
+      {% for task in tasks %}
+        <li class="task-item">
+          <h3 class="task-title">{{ task.title }}</h3>
+          <p class="task-description">{{ task.description }}</p>
+          <div class="task-actions">
+            <a href="{% url 'edit_task' task.id %}" class="task-action btn btn-primary">Edit</a>
+            <a href="{% url 'delete_task' task.id %}" class="task-action task-delete btn btn-danger">Delete</a>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+    <a href="{% url 'add_task' %}" class="add-task-link">Add Task</a>
+  </div>
+</body>
+</html>

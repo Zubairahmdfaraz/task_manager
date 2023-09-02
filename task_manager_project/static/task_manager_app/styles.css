@@ -1,0 +1,84 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Navigation Bar Styles */
+  .navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+  }
+  
+  .navbar-brand {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .navbar-brand img {
+    width: auto;       /* Reset the width */
+    height: 30%;      /* Stretch the image fully over the height of the navbar */
+    margin-right: 10px
+  }
+  
+  .page-title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .task-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+  }
+  .task-title {
+    margin: 0;
+    color: #007bff;
+  }
+  
+  .task-description {
+    margin: 0;
+  }
+  
+  .task-action {
+    padding: 6px 12px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+  
+  .task-delete {
+    color: #ff0000;
+  }
+  
+  .add-task-link {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #007bff;
+  }
+  .fit-image {
+    max-width: 100%;
+    height: auto;
+  }
